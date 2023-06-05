@@ -31,8 +31,14 @@
   background-color: rgb(148, 190, 233);
 }
 
+.welcome:hover {
+  cursor: pointer;
+}
+
 /* main */
 main {
+  display: flex;
+  flex-direction: column;
   margin: 2rem 5rem;
 }
 
@@ -56,18 +62,27 @@ main {
   padding-top: .5rem;
 }
 
-footer {
+.btn {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer button {
+.btn button {
   width: 6rem;
   height: 2rem;
   border: none;
   background-color: #d0e5faf4;
+}
+
+.btn button:hover {
+  cursor: pointer;
+}
+
+.add-section {
+  display: none;
+  margin-top: 1rem;
 }
 
 /* media query */
