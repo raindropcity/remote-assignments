@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn-sum").click(function () {
+                const number = $("#input-number").val();
+                $.ajax({
+                    url: `http://localhost:${location.port}/data?number=${number}`,
+                    type: "GET",
+                    dataType: "json",
+                    success: function () {
+                        const int = 0;
+                        for (let i = 1; i <= number; i++) {
+                            int += i
+                        }
+                        $("#sum-result").text(int);
+                    },
+                    error: function (error) {
+                        console.log('somthing wrong');
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Calculate Sum</h1>
+    <input type="text" id="input-number" placeholder="Enter a number">
+    <button id="btn-sum">Calculate</button>
+    <div id="sum-result"></div>
+</body>
+</html>
