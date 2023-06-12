@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Name</title>
+</head>
+<body>
+    @if (ViewBag.Name != null)
+    {
+        <h1>Welcome, @ViewBag.Name!</h1>
+    }
+    else
+    {
+        <form method="get" action="@Url.Action("SetName", "MyName")">
+            <input type="text" name="name" placeholder="Enter your name" />
+            <button type="submit">Submit</button>
+        </form>
+    }
+</body>
+</html>
