@@ -7,7 +7,7 @@
             $("#btn-sum").click(function () {
                 const number = $("#input-number").val();
                 $.ajax({
-                    url: `http://localhost:${location.port}/data?number=${number}`,
+                    url: `https://localhost:${location.port}/data?number=${number}`,
                     type: "GET",
                     dataType: "json",
                     success: function () {

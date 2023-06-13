@@ -8,7 +8,7 @@ namespace Assignment_2.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        [HttpGet("{number}")]
+        [HttpGet]
         public IActionResult GetData(string? number)
         {
             if (number == null)
