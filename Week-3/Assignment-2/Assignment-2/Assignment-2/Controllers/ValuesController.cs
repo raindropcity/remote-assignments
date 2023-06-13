@@ -8,16 +8,16 @@ namespace Assignment_2.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        [HttpGet("data")]
-        public IActionResult GetData(int? number)
+        [HttpGet("{number}")]
+        public IActionResult GetData(string? number)
         {
             if (number == null)
             {
                 return BadRequest("Lack of Parameter");
             }
-            else if (!int.TryParse(number.ToString(), out int value))
+            else if (!int.TryParse(number, out int value))
             {
-                return BadRequest("Wrong");
+                return BadRequest("Wrong Parameter");
             }
             else
             {

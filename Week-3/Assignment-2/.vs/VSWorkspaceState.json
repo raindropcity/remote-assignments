@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Assignment-2",
+    "\\Assignment-2\\Assignment-2",
+    "\\Assignment-2\\Assignment-2\\Controllers"
   ],
+  "SelectedNode": "\\Assignment-2\\Assignment-2\\Controllers\\ValuesController.cs",
   "PreviewInSolutionExplorer": false
 }
