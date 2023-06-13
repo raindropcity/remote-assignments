@@ -3,8 +3,9 @@
     "",
     "\\Assignment-2",
     "\\Assignment-2\\Assignment-2",
-    "\\Assignment-2\\Assignment-2\\Controllers"
+    "\\Assignment-2\\Assignment-2\\Controllers",
+    "\\Assignment-2\\Assignment-2\\wwwroot"
   ],
-  "SelectedNode": "\\Assignment-2\\Assignment-2\\Controllers\\ValuesController.cs",
+  "SelectedNode": "\\Assignment-2\\Assignment-2\\wwwroot",
   "PreviewInSolutionExplorer": false
 }
