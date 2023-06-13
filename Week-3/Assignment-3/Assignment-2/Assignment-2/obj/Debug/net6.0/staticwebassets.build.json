@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ei95U0wWXbuUILV1BKhrlo+kwH3801ebf33C1DVEXwg=",
+  "Source": "Assignment-2",
+  "BasePath": "_content/Assignment-2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Assignment-2\\wwwroot",
+      "Source": "Assignment-2",
+      "ContentRoot": "C:\\Users\\user\\project\\remote-assignments\\Week-3\\Assignment-3\\Assignment-2\\Assignment-2\\wwwroot\\",
+      "BasePath": "_content/Assignment-2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\project\\remote-assignments\\Week-3\\Assignment-3\\Assignment-2\\Assignment-2\\wwwroot\\sum.html",
+      "SourceId": "Assignment-2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\project\\remote-assignments\\Week-3\\Assignment-3\\Assignment-2\\Assignment-2\\wwwroot\\",
+      "BasePath": "_content/Assignment-2",
+      "RelativePath": "sum.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sum.html"
+    }
+  ]
+}
