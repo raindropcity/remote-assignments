@@ -1,0 +1,19 @@
+﻿@model Assignment_1.Models.AddUserViewModel
+
+@{
+}
+
+<h1>Sign In</h1>
+<form>
+    <div class="mb-3 mt-5" method="post" action="Add">
+        <label for="" class="form-label">Email address</label>
+        <input type="email" class="form-control" asp-for="Email">
+        @*「asp-for="Email"」 recognizing that "Email" is a property of this viewmodel, 
+        so what value the textbox has is assigning that property value to this "Email" property.*@
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
