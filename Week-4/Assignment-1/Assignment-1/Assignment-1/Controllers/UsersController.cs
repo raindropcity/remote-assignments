@@ -62,10 +62,9 @@ namespace Assignment_1.Controllers
                 Password = signInRequest.Password
             };
 
-            bool comfirmEmail = assignmentDbContext.Users.Any(e => e.Email == user.Email);
-            bool comfirmPassword = assignmentDbContext.Users.Any(e => e.Password == user.Password);
+            bool comfirmEmailandPassword = assignmentDbContext.Users.Any(e => e.Email == user.Email && e.Password == user.Password);
 
-            if (comfirmEmail && comfirmPassword)
+            if (comfirmEmailandPassword)
             {
                 return RedirectToAction("Member");
             }
