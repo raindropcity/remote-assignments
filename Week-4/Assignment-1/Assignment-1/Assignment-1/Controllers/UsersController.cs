@@ -62,12 +62,15 @@ namespace Assignment_1.Controllers
                 Password = signInRequest.Password
             };
 
-            if (assignmentDbContext.Users.Any(e => e.Email == user.Email))
+            bool comfirmEmail = assignmentDbContext.Users.Any(e => e.Email == user.Email);
+            bool comfirmPassword = assignmentDbContext.Users.Any(e => e.Password == user.Password);
+
+            if (comfirmEmail && comfirmPassword)
             {
                 return RedirectToAction("Member");
             }
 
-            return Content("Please sign up first");
+            return Content("Please check your Email or Password");
         }
     }
 }
