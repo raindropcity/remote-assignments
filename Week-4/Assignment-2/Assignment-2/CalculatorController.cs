@@ -15,8 +15,16 @@ namespace Assignment_2
 
         public void Calculate(int a, int b)
         {
-            Console.WriteLine($"Calculating {_calculatorType}...");
-            Console.WriteLine($"Result: {(_calculatorType == "Simple" ? _calculator.Add(a, b) : _calculator.Subtract(a, b))}");
+            Console.WriteLine($"Calculating with \"{_calculatorType}\" method");
+
+            if (_calculatorType == "SimpleAdd")
+            {
+                Console.WriteLine($"Result: {_calculator.Add(a, b)}");
+            }
+            else if (_calculatorType == "SimpleSubtract")
+            {
+                Console.WriteLine($"Result: {_calculator.Subtract(a, b)}");
+            }
         }
     }
 }

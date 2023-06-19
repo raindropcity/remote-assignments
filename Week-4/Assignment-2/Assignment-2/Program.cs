@@ -1,33 +1,24 @@
-using Assignment_2.Implementations;
-using Assignment_2.Interfaces;
-using Assignment_2;
 using Microsoft.Extensions.DependencyInjection;
+using Assignment_2;
+using Assignment_2.Interfaces;
+using Assignment_2.Implementations;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-
-builder.Services.AddTransient<ICalculator, SimpleCalculator>();
-builder.Services.AddSingleton(new CalculatorController(builder.Services.GetService<ICalculator>(), "Simple"));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+class Program
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    static void Main(string[] args)
+    {
+        var serviceProvider = new ServiceCollection()
+                                .AddTransient<ICalculator, SimpleCalculator>()
+                                .BuildServiceProvider();
+
+        var calculator = serviceProvider.GetService<ICalculator>();
+        var calculatorType = "SimpleSubtract";
+
+        var calculatorController = new CalculatorController(calculator, calculatorType);
+
+        calculatorController.Calculate(20, 10);
+
+        // using the line below in order to keep the console open
+        Console.ReadLine();
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();
